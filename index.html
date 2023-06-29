@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coding Quiz</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
   <header>
-    <h1>Coding Quiz</h1>
-  </header>
+    <button type="button" id=leaderboard-link class="button">View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+    </i></button>
+    
+    <time class="text">Time Left: <span id="time"></span></time>
+</header>
+  <div id="start-card">
+    <h1>Welcome to the Quiz</h1>
+    <button id="start-button">Start Quiz</button>
+  </div>
 
-  <main>
-    <section id="start-screen">
-      <h2>Welcome to the Coding Quiz!</h2>
-      <button id="start-btn">Start Quiz</button>
-    </section>
+  <div id="question-card" hidden>
+    <h2 id="question-text"></h2>
+    <div id="quiz-options">
+      <button id="option0"></button>
+      <button id="option1"></button>
+      <button id="option2"></button>
+      <button id="option3"></button>
+    </div>
+    <div id="result-div">
+      <p id="result-text"></p>
+    </div>
+ 
+  </div>
 
-    <section id="quiz-screen" class="hide">
-      <h2 id="question-text"></h2>
-      <ul id="choices-list"></ul>
-    </section>
+  <div id="score-card" hidden>
+    <h2>Your Score</h2>
+    <p id="score"></p>
+    <form id="score-form">
+      <label for="initials">Enter your initials:</label>
+      <input type="text" id="initials" name="initials" maxlength="2" />
+      <button id="submit-button">Submit</button>
+    </form>
+  </div>
 
-    <section id="end-screen" class="hide">
-      <h2>Quiz Completed!</h2>
-      <p>Your final score is <span id="final-score"></span>.</p>
-      <form id="highscore-form">
-        <label for="initials">Enter your initials:</label>
-        <input type="text" id="initials" maxlength="3">
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+  <div id="leaderboard-card" hidden>
+    <h2>Leaderboard</h2>
+    <ul id="highscore-list"></ul>
+    <button id="clear-button">Clear Highscores</button>
+    <button id="back-button">Go Back</button>
+  </div>
 
   <script src="./assets/js/script.js"></script>
 </body>

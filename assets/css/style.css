@@ -1,31 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
   
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-  }
-  
-  section {
-    text-align: center;
-  }
-  
-  .hide {
-    display: none;
-  }
+}
+header{
+color: white;
+background-color: rgb(1, 26, 107);
+
+}
+button{
+  background-color: #4caf50;
+  justify-content: left;
+}
+text{
+  justify-content: end;
+  color: red;
+}
+
+#start-card,
+#question-card,
+#score-card,
+#leaderboard-card {
+  margin: 20px auto;
+  padding: 20px;
+  width: 400px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#start-card h1,
+#score-card h2,
+#leaderboard-card h2 {
+  margin-top: 0;
+}
+
+#start-card button,
+#option0,
+#option1,
+#option2,
+#option3 {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#question-card #quiz-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#question-card #quiz-options button {
+  margin: 5px 0;
+}
+
+#question-card #result-div {
+  display: none;
+  margin-top: 20px;
+}
+
+#question-card #time-display {
+  margin-top: 20px;
+}
+
+#score-card #score-form {
+  margin-top: 20px;
+}
+
+#score-card label,
+#score-card input {
+  display: block;
+  margin: 5px auto;
+}
+
+#score-card input {
+  padding: 5px;
+  width: 100
+}
